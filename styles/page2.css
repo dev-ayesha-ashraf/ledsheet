@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+
+.tier-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tier-2 {
+  background-color: #8B4A9C;
+}
+
+.tier-3 {
+  background-color: #9ACD32;
+  color: #333;
+}
+
+/* matrix */
+.matrix {
+  width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border: 1px solid #dcdcdc;
+}
+
+/* COLUMNS */
+.column {
+  border-right: 1px solid #dcdcdc;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+/* HEADERS */
+.header {
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 4px;
+  /* background: #f7f7f7; */
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.header span {
+  display: block;
+  font-size: 9.5px;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+/* CONTENT — FLOWING TEXT (NO CELLS) */
+.content {
+  padding: 6px 6px;
+  font-size: 10.5px;
+  line-height: 1.28;
+}
+
+.content p {
+  margin: 0 0 6px 0;
+}
+
+/* TEXT STYLES */
+.bold {
+  font-weight: bold;
+}
+
+.note {
+  font-size: 9px;
+  color: #555;
+  font-weight: normal;
+}
+
+.warm {
+  color: #c14400;
+  font-weight: bold;
+}
+
+/* ORANGE HIGHLIGHT */
+.highlight {
+  border: 2px solid #ff6a00;
+  padding: 4px;
+  margin-bottom: 6px;
+}
+/* Notes Section */
+.notes-section {
+  margin-bottom: 20px;
+  font-size: 9px;
+}
+
+.notes-section h3 {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.notes-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notes-section li {
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+.notes-section a {
+  color: #4A90E2;
+  text-decoration: none;
+}
+
+.notes-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+  
+  .spec-table {
+    font-size: 8px;
+  }
+  
+  .option-item {
+    font-size: 7px;
+    padding: 1px 2px;
+  }
+  
+  .option-desc {
+    font-size: 6px;
+  }
+  
+  .col-header {
+    font-size: 9px;
+  }
+  
+  .subheader-row td {
+    font-size: 8px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .spec-table {
+    page-break-inside: avoid;
+  }
+}

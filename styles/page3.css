@@ -1,0 +1,27 @@
+.imgs {
+    width: 100%;
+}
+
+.imgs div {
+    display: flex;
+    display: flex;
+    justify-content: center;
+}
+
+.imgs img {
+    width: 60%;
+    margin-top: 20px;
+}
+
+.imgdiv{
+    width: 50%;
+    align-items: center;
+}
+
+.right-img{
+border-left: 1.2px solid #333;
+}
+
+.img-div-two{
+    margin-top: 100px;
+}

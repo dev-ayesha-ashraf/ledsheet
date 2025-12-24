@@ -53,7 +53,9 @@ body {
 .tier-3 {
   background-color: #9acd32;
 }
-
+.header{
+  border-bottom: 1px solid #333;
+}
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -82,14 +84,10 @@ body {
   font-weight: bold;
 }
 
-.usai-text {
-  display: block;
-  font-size: 45px;
-  font-weight: 600;
-  color: #f8a350;
-  line-height: 1;
+.logo img{
+  height: 100px;
+  width: 100px;
 }
-
 .lighting-text {
   display: block;
   font-size: 25px;
@@ -100,7 +98,6 @@ body {
 
 .product-variants {
   padding: 25px 20px;
-  border-top: 1px solid #333;
 }
 
 .variants-title {
@@ -217,6 +214,7 @@ body {
 }
 .color-dots img{
   height: 25px !important;
+  width:100% !important;
 }
 .green img{
   width: 25px !important;
@@ -316,10 +314,6 @@ body {
     gap: 20px;
   }
 
-  .logo {
-    text-align: left;
-  }
-
   .variants-grid {
     grid-template-columns: 1fr;
   }
@@ -367,7 +361,4 @@ body {
     font-size: 20px;
   }
 
-  .usai-text {
-    font-size: 28px;
-  }
 }
