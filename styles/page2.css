@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,119 +9,226 @@ body {
   font-family: Arial, sans-serif;
   font-size: 11px;
   line-height: 1.2;
-  background-color: #f5f5f5;
+  background-color: white !important;
   color: #333;
+  overflow-x: hidden; 
 }
 
-
-.tier-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.tier-2 {
-  background-color: #8B4A9C;
-}
-
-.tier-3 {
-  background-color: #9ACD32;
-  color: #333;
-}
-
-/* matrix */
 .matrix {
-  width: 1180px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1180px;
+  margin: 20px auto 0;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, minmax(70px, 1fr));
   border: 1px solid #dcdcdc;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* COLUMNS */
+@media (max-width: 1250px) {
+  .matrix {
+    grid-template-columns: repeat(13, 90px); 
+    font-size: 9.5px; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .matrix {
+    grid-template-columns: repeat(13, 85px);
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .product-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .project-info {
+    text-align: center;
+  }
+  
+  .matrix {
+    grid-template-columns: repeat(13, 80px); 
+    font-size: 8.5px;
+    margin: 15px auto 0;
+  }
+  
+  .header-col {
+    font-size: 11px;
+    padding: 4px 2px;
+  }
+  
+  .content {
+    padding: 4px 3px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+  
+  .content strong {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .matrix {
+    grid-template-columns: repeat(13, 75px);
+    font-size: 8px;
+  }
+  
+  .product-title {
+    font-size: 16px;
+  }
+  
+  .notes-section h3 {
+    font-size: 12px;
+  }
+  
+  .notes-section li {
+    font-size: 10px;
+  }
+}
+
 .column {
   border-right: 1px solid #dcdcdc;
+  min-width: 0; 
 }
 
 .column:last-child {
   border-right: none;
 }
 
-/* HEADERS */
-.header {
+.header-col {
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   padding: 6px 4px;
-  /* background: #f7f7f7; */
+  background-color: #f1efef;
   border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #271e20;
+  word-break: break-word;
 }
 
-.header span {
-  display: block;
-  font-size: 9.5px;
-  font-weight: normal;
-  margin-top: 2px;
-}
-
-/* CONTENT — FLOWING TEXT (NO CELLS) */
 .content {
   padding: 6px 6px;
   font-size: 10.5px;
   line-height: 1.28;
+  min-height: 100px; 
 }
 
 .content p {
   margin: 0 0 6px 0;
 }
 
-/* TEXT STYLES */
+.img-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.content img {
+  width: 65%;
+  height: auto;
+  max-width: 100%;
+}
+
 .bold {
   font-weight: bold;
+}
+
+.bold span {
+  font-weight: 500 !important;
 }
 
 .note {
   font-size: 9px;
   color: #555;
   font-weight: normal;
+  display: block;
+  line-height: 1.1;
 }
 
-.warm {
-  color: #c14400;
+.bg-white {
+  background-color: white !important;
   font-weight: bold;
+  padding: 2px 0;
+  margin: 3px 0;
 }
 
-/* ORANGE HIGHLIGHT */
+.content strong {
+  display: flex;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  align-items: center;
+  color: #271e20;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
 .highlight {
   border: 2px solid #ff6a00;
   padding: 4px;
   margin-bottom: 6px;
+  background-color: #fff8f3;
 }
-/* Notes Section */
+
+.wattage2 {
+  margin-top: 100px;
+}
+
+.wattage3 {
+  margin-top: 50px;
+}
+
 .notes-section {
-  margin-bottom: 20px;
+  margin: 25px 0 20px;
   font-size: 9px;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
 }
 
 .notes-section h3 {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
+  margin-bottom: 8px;
+  color: #676767;
 }
 
 .notes-section ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 15px;
 }
 
 .notes-section li {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   line-height: 1.3;
+  font-size: 12px;
+  color: #676767;
+  position: relative;
+}
+
+.notes-section li:before {
+  content: "●";
+  position: absolute;
+  left: -15px;
+  color: #676767;
 }
 
 .notes-section a {
@@ -132,46 +240,100 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container {
-    padding: 5px;
-  }
-  
-  .spec-table {
-    font-size: 8px;
-  }
-  
-  .option-item {
-    font-size: 7px;
-    padding: 1px 2px;
-  }
-  
-  .option-desc {
-    font-size: 6px;
-  }
-  
-  .col-header {
-    font-size: 9px;
-  }
-  
-  .subheader-row td {
-    font-size: 8px;
-  }
+.footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #dcdcdc;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Print styles */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #271e20;
+  margin-bottom: 5px;
+}
+
+.footer address {
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.footer a {
+  color: #4A90E2;
+  text-decoration: none;
+  display: block;
+  margin: 3px 0;
+}
+
+.footer .phone {
+  display: block;
+  margin-top: 3px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.copyright,
+.patent-info,
+.creation-date {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.creation-date span {
+  font-weight: bold;
+}
+
 @media print {
   body {
     background-color: white;
+    font-size: 9px;
   }
   
   .container {
-    max-width: none;
+    max-width: 100%;
     padding: 0;
   }
   
-  .spec-table {
+  .matrix {
     page-break-inside: avoid;
+    max-width: 100%;
+    grid-template-columns: repeat(13, 1fr);
+  }
+  
+  .notes-section {
+    page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 768px) {
+  .matrix {
+    position: relative;
+  }
+  
+  .matrix::after {
+    content: "→";
+    position: sticky;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 20px;
+    opacity: 0.6;
+    pointer-events: none;
   }
 }
