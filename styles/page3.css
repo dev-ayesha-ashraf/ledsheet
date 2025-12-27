@@ -8,9 +8,14 @@
     justify-content: center;
 }
 
-.imgs img {
-    width: 60%;
+.imgs .img1 {
+    width: 93%;
+    /* margin-top: 20px; */
+}
+
+.imgs .img-2{
     margin-top: 20px;
+    width: 67%;
 }
 
 .imgdiv{

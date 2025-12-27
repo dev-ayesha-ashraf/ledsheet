@@ -110,16 +110,3 @@ body {
   margin-bottom: 12px;
   font-weight: bold;
 }
-
-/* FOOTER */
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 32px;
-  font-size: 12px;
-  border-top: 1px solid #ccc;
-}
-
-.footer-right {
-  text-align: right;
-}
